@@ -129,6 +129,13 @@ variable "kms_key_id" {
   description = "kms key id of the instance to which the volume is to be attached"
 }
 
+variable "kms_key_id1234" {
+  type        = string
+  description = "kms key id of the instance to which the volume is to be attached"
+  key         = string
+  text        = value
+}
+
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
   type        = map(string)
