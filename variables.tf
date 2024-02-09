@@ -124,18 +124,6 @@ variable "max_session_duration" {
   default = "3600"
 }
 
-variable "force_detach_policies" {
-  description = "Whether to force detaching any policies the role has before destroying it"
-  type        = bool
-  validation {
-    condition     = contains([false, true], var.force_detach_policies)
-    error_message = "Argument 'force_detach_policies' must be one of 'false', 'true'"
-} 
-
-  default     = false
-
-} 
-
 variable "kms_key_id" {
   type        = string
   description = "kms key id of the instance to which the volume is to be attached"
