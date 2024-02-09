@@ -106,16 +106,6 @@ variable "iam_role_definitions" {
   default = ""
 }
 
-variable "force_detach_policies" {
-  description = "Whether to force detaching any policies the role has before destroying it"
-  type        = bool
-  validation {
-    condition     = contains([false, true], var.force_detach_policies)
-    error_message = "Argument 'force_detach_policies' must be one of 'false', 'true'"
-  }
-  default     = false
-}
-
 variable "iam_role_description" {
   description = "Description of the IAM role."
   type        = string
